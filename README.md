@@ -6,36 +6,40 @@ The objective of this project was to build a web app that correctly classifies m
 ## Description
 The project was made in three different parts:
 
-1. ETL pipeline - located in /data:
+1. ETL pipeline:
 
-    * Files:
-      - init script
-      - process_data.py: Code containing steps in building the ETL pipeline
-      - disaster_categories.csv: Disaster categories of a particular message
-      - disaster_messages.csv: Disaster messages
-      - DisasterResponse.db: SQLite database where the new DataFrame was loaded
+  * Usage:
+    - To run ETL pipeline that cleans data and stores in database:
+      python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
 
-    * Usage:
-      - To run ETL pipeline that cleans data and stores in database:
-        python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
+2. Machine learning model:
 
-2. Machine learning model located at /models:
+  * Usage:
+    - To run ML pipeline that trains classifier and saves
+      python models/train_classifier.py data/DisasterResponse.db models/Random_Forest_cv.pkl
 
-    * Files:
-      - init script
-      - train_classifier: Code containing the NLP classification model
-
-    * Usage:
-      - To run ML pipeline that trains classifier and saves
-        python models/train_classifier.py data/DisasterResponse.db models/Random_Forest_cv.pkl
-
-
-3. Flask app - located at /app:
-
-    * Files:
-      - init script
-      - run.py: code containing the instructions to run the web app and plot visualization
-      - templates folder: go.html and master.html, html code for displaying the web app.
+3. Flask app:
 
     * Usage:
       - To run the web application just run: python app/run.py
+
+## Files
+
+* data folder
+  - init script
+  - process_data.py: Code containing steps in building the ETL pipeline
+  - disaster_categories.csv: Disaster categories of a particular message
+  - disaster_messages.csv: Disaster messages
+  - DisasterResponse.db: SQLite database where the new DataFrame was loaded
+
+* models folder
+  - init script
+  - train_classifier: Code containing the NLP classification model
+
+* app folder
+  - init script
+  - run.py: code containing the instructions to run the web app and plot visualization
+  - templates folder: go.html and master.html, html code for displaying the web app.
+
+## Libraries
+If conda install the only libraries that need installation are Plotly and nltk.
