@@ -7,21 +7,16 @@ The objective of this project was to build a web app that correctly classifies m
 The project was made in three different parts:
 
 1. ETL pipeline:
-
-  * Usage:
-    - To run ETL pipeline that cleans data and stores in database:
-      python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
+    * Usage:
+      - python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
 
 2. Machine learning model:
-
-  * Usage:
-    - To run ML pipeline that trains classifier and saves
-      python models/train_classifier.py data/DisasterResponse.db models/Random_Forest_cv.pkl
+    * Usage:
+      - python models/train_classifier.py data/DisasterResponse.db models/Random_Forest_cv.pkl
 
 3. Flask app:
-
     * Usage:
-      - To run the web application just run: python app/run.py
+      - python app/run.py
 
 ## Files
 
