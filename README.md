@@ -4,19 +4,19 @@
 The objective of this project was to build a web app that correctly classifies messages that are written in a disaster-like situation. The application was build on a dataset of already labeled tweets over 36 possible categories, provided by figure eight. The idea behind this app is for the different organizations in charge of handling these type of situations, to reduce their aid-reaction time by knowing in real time fashion, the type or category a message is.
 
 ## Description
-The project was made in three different parts:
+The project was made in three different parts ETL :
 
 1. ETL pipeline:
     * Usage:
-      - python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
+      - Run: python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
 
 2. Machine learning model:
     * Usage:
-      - python models/train_classifier.py data/DisasterResponse.db models/Random_Forest_cv.pkl
+      - Run: python models/train_classifier.py data/DisasterResponse.db models/Random_Forest_cv.pkl
 
 3. Flask app:
     * Usage:
-      - python app/run.py
+      - Run: python app/run.py
 
 ## Files
 
